@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shilpa-Kala</string>
+    <string name="tagline">Digital Portfolio Assistant</string>
+    <string name="heritage_label">Handmade in Karnataka</string>
+    <string name="capture_hint">Place your product inside the frame</string>
+    <string name="artisan_name_hint">e.g. Ramesh Kumar</string>
+    <string name="product_name_hint">e.g. Wooden Elephant</string>
+    <string name="price_hint">e.g. 2500</string>
+    <string name="btn_generate">Generate Professional Photo</string>
+    <string name="btn_save">Save to Gallery</string>
+    <string name="btn_share">Share</string>
+    <string name="btn_whatsapp">WhatsApp</string>
+    <string name="btn_new_photo">New Photo</string>
+    <string name="share_text">✨ Handmade in Karnataka 🪵\nAuthentic artisan craft by a skilled craftsperson.\n#ShilpaKala #HandmadeInIndia #KarnatakaArtisans</string>
+</resources>

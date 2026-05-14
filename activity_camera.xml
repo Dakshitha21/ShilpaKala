@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_dark_bg">
+
+    <!-- Full-screen camera preview -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/cameraPreview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:scaleType="fillCenter" />
+
+    <!-- Custom overlay guide drawn with Canvas -->
+    <com.shilpakala.app.camera.CameraOverlayView
+        android:id="@+id/cameraOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Top bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Shilpa-Kala"
+            android:textColor="@color/color_gold_light"
+            android:textSize="20sp"
+            android:fontFamily="serif"
+            android:textStyle="bold|italic" />
+
+        <ImageButton
+            android:id="@+id/btnFlash"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_camera"
+            android:tint="@color/color_gold"
+            android:contentDescription="Flash" />
+
+    </LinearLayout>
+
+    <!-- Bottom controls -->
+    <LinearLayout
+        android:id="@+id/bottomControls"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingBottom="48dp"
+        android:paddingTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TAP TO CAPTURE"
+            android:textColor="@color/color_gold"
+            android:textSize="12sp"
+            android:letterSpacing="0.2"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Capture Button - styled as a golden ring with white circle inside -->
+        <FrameLayout
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_gravity="center">
+
+            <!-- Outer gold ring -->
+            <View
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:background="@drawable/bg_capture_outer" />
+
+            <!-- Inner white circle (tap target) -->
+            <Button
+                android:id="@+id/btnCapture"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_capture_inner"
+                android:text=""
+                android:elevation="4dp" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

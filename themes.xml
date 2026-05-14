@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Theme.ShilpaKala" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/color_gold</item>
+        <item name="colorPrimaryVariant">@color/color_brown</item>
+        <item name="colorOnPrimary">@color/color_dark_bg</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/color_gold_light</item>
+        <item name="colorSecondaryVariant">@color/color_gold</item>
+        <item name="colorOnSecondary">@color/color_dark_bg</item>
+
+        <!-- Background -->
+        <item name="android:windowBackground">@color/color_dark_bg</item>
+        <item name="android:colorBackground">@color/color_dark_bg</item>
+        <item name="colorSurface">@color/color_card_bg</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/color_darker_bg</item>
+        <item name="android:navigationBarColor">@color/color_darker_bg</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+
+        <!-- EditText -->
+        <item name="colorControlActivated">@color/color_gold</item>
+        <item name="colorControlHighlight">#33C9A84C</item>
+
+        <!-- Spinner -->
+        <item name="android:spinnerStyle">@style/SpinnerStyle</item>
+    </style>
+
+    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/bg_input_field</item>
+        <item name="android:popupBackground">@color/color_card_bg</item>
+    </style>
+</resources>
